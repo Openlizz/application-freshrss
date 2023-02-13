@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: freshrss-cert
+  namespace: {{index . "namespace"}}
+spec:
+  dnsNames:
+    - freshrss.{{ index . "domain"}}
+  secretName: freshrss-cert
+  issuerRef:
+    name: cluster-issuer
+    kind: ClusterIssuer
