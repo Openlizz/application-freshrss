@@ -48,7 +48,4 @@ dependsOn:
   - name: {{index . "domainName"}}
     namespace: {{index . "domainNamespace"}}
   {{- end }}
-encryption:
-  enabled: true
-  inputPaths:
-    - base/secret.yaml
+
